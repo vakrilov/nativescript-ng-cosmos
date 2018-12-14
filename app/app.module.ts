@@ -13,6 +13,7 @@ import { LoginComponent } from "./pages/login/login.component";
 import { MainComponent } from "./pages/main/main.component";
 import { ApodService } from "./services/apod.service";
 import { appCenter } from "./shared/app-center-initializer";
+import { ModalViewComponent } from "./pages/main/modal-view.component";
 
 registerElement("CardView", () => require("nativescript-cardview").CardView);
 
@@ -24,9 +25,10 @@ registerElement("CardView", () => require("nativescript-cardview").CardView);
         NativeScriptHttpClientModule,
         NativeScriptUISideDrawerModule
     ],
-    declarations: [AppComponent, LoginComponent, MainComponent],
+    declarations: [AppComponent, LoginComponent, MainComponent, ModalViewComponent],
     providers: [ApodService, { provide: AppCenter, useValue: appCenter }],
-    schemas: [NO_ERRORS_SCHEMA]
+    schemas: [NO_ERRORS_SCHEMA],
+    entryComponents: [ModalViewComponent]
 })
 /*
 Pass your application module to the bootstrapModule function located in main.ts to start your app
