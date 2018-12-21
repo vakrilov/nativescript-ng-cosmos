@@ -8,6 +8,8 @@
 
 <ScrollView class="background">
     <StackLayout>
+        <Button text="Open MODAL" (tap)="onOpenModal($event)" class="btn btn-primary btn-active"></Button>
+        
 
         <CardView elevation="40" radius="40" margin="10" class="cardview" (loaded)="onViewLoaded($event, -400, 0, -100, 0)" >
             <GridLayout rows="160" columns="3*, 4*" [nsRouterLink]="['/apod']">

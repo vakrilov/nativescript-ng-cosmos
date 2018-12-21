@@ -64,7 +64,7 @@ export class AppComponent implements OnInit, AfterViewInit {
                 console.log(`Value of 'foo': ${message.data.foo}`);
             },
             onPushTokenReceivedCallback: function(token) {
-                console.log("Firebase push token: " + token);
+                console.log(">>>>>>>>>. Firebase PUSH Token: " + token);
             },
 
             // optional but useful to immediately re-logon the user when he re-visits your app
